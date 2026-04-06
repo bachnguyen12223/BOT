@@ -102,9 +102,10 @@ functions = [
 ]
 
             
-TOKEN = input("   Token bot: ").strip()
-ADMIN_IDS = input("   ID Admin: ").split(",")
-ADMIN_IDS = [aid.strip() for aid in ADMIN_IDS]
+import os
+TOKEN = os.getenv("MTQxNjI3Mzc3NDIxODcxMTA2MA.GoxA_5.engNyhsZuVIioYJHEFAUrBSiA7NqhIbHaCb5QU")
+ADMIN_IDS = os.getenv("1123085729652801587", "").split(",")
+ADMIN_IDS = [aid.strip() for aid in ADMIN_IDS if aid.strip()]
 
 INTENTS = discord.Intents.default()
 INTENTS.members = True
